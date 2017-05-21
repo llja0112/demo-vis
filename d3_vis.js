@@ -236,6 +236,7 @@ function graph(d3) {
         if (d.ref.edge_width) return Math.max(1, boxHeight / 2 * d.ref.edge_width); //won't become invisible if too thin
         else return self.config.edge_def_width; //default value
       })
+      .style('stroke', function(d) { return d.ref.colour; });
 
       // when path changes
       path.attr("d", diagonal)
@@ -501,10 +502,12 @@ function init_page(){
         from: 0,
         to: 1,
         edge_width: Math.random(),
+        colour: "#FFDB58"
       }, {
         from: 0,
         to: 2,
         edge_width: Math.random(),
+        colour: "grey"
       }, ]
     },
     "1": {
@@ -517,10 +520,12 @@ function init_page(){
         from: 1,
         to: 3,
         edge_width: Math.random(),
+        colour: "#FFDB58"
       }, {
         from: 1,
         to: 4,
         edge_width: Math.random(),
+        colour: "grey"
       }, ]
     },
     "2": {
@@ -532,11 +537,13 @@ function init_page(){
       ref: [{
         from: 2,
         to: 8,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       }, {
         from: 2,
         to: 9,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       }]
     },
     "3": {
@@ -548,11 +555,13 @@ function init_page(){
       ref: [{
         from: 3,
         to: 5,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       },{
         from: 3,
         to: 6,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "#FFDB58"
       }]
     },
     "4": {
@@ -565,6 +574,7 @@ function init_page(){
         from: 4,
         to: 7,
         edge_width: Math.random(),
+        colour: "grey"
       }, ]
     },
     "5": {
@@ -597,11 +607,13 @@ function init_page(){
       ref: [{
         from: 8,
         to: 10,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       },{
         from: 8,
         to: 11,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       }]
     },
     "9": {
@@ -613,11 +625,13 @@ function init_page(){
       ref: [{
         from: 9,
         to: 12,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       },{
         from: 9,
         to: 13,
-        edge_width: Math.random()
+        edge_width: Math.random(),
+        colour: "grey"
       }]
     },
     "10": {
