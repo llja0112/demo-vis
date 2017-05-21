@@ -9,9 +9,68 @@
   <link rel="stylesheet" href="d3_vis.css">
 </head>
 <body>
+  <!-- Header -->
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand mr-auto" href="#">Debug Dashboard</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mr-auto">
+        <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
   <div class="container">
-    <h1 class="text-center">Dashboard</h1>
     <div id="content"></div>
+
+    <div class="row">
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-block card-outline-success">
+            <h3 class="card-title">Response Info</h3>
+            <dl class="row">
+              <dt class="col-md-3">Domain Type</dt>
+              <dd class="col-md-9">Closed Sourced</dd>
+              <dt class="col-md-3">Knowledge Type</dt>
+              <dd class="col-md-9">Crowd Sourced</dd>
+              <dt class="col-md-3">Data Representation Type</dt>
+              <dd class="col-md-9">Posts (Help Forums)</dd>
+              <dt class="col-md-3">Response Selection (Algorithm)</dt>
+              <dd class="col-md-9">Generative (Deep Learning)</dd>
+              <dt class="col-md-3">Final Output</dt>
+              <dd class="col-md-9">Bee Blah Blue</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 mb-3">
+        <div class="card card-outline-primary">
+          <div class="card-block">
+            <h3 class="card-title">Module Selection Info</h3>
+            <dl class="row">
+              <dt class="col-md-3">Domain Type</dt>
+              <dd class="col-md-9">Closed Sourced</dd>
+              <dt class="col-md-3">Reason</dt>
+              <dd class="col-md-9">Because I am smart!</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="card card-inverse card-success">
+          <div class="card-block">
+            <h3 class="card-title">Conclusion</h3>
+            <p>The conclusion is a remarkably well trained data set. You can now take the following action: Boo!</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="d3_vis.js"></script>
   </div>
