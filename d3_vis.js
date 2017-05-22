@@ -146,7 +146,7 @@ function graph(d3) {
     var fontSize = 8
     var lineSpace = 2
     var boxHeight = 50
-    var boxWidth = 85
+    var boxWidth = 125
 
     var width = self.config.bg_size.width;
     var height = self.config.bg_size.height;
@@ -279,8 +279,8 @@ function graph(d3) {
     .attr("transform", function (d) {
       return "translate(" + d.y + "," + d.x + ")";
     })
-    //.append("rect") //make nodes as rectangles OR:
-    .append("circle").attr('r',50) //make nodes as circles
+    .append("rect") //make nodes as rectangles OR:
+    // .append("circle").attr('r',50) //make nodes as circles
     .attr('class', 'nodebox')
     .attr("x", -boxWidth / 2)
     .attr("y", -boxHeight / 2)
