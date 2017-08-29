@@ -34,6 +34,7 @@ function graph(d3) {
   /// step 2, custom the actions
   var showTitleAction;
   var showSubheadAction;
+  var showDescriptionAction;
   var showPathDesc;
 
   this.showTitle = function (f) {
@@ -42,6 +43,10 @@ function graph(d3) {
 
   this.showSubhead = function (f) {
     showSubheadAction = f;
+  }
+
+  this.showDescription = function (f) {
+    showDescriptionAction = f;
   }
 
   this.showPathDesc = function (f) {
@@ -143,7 +148,7 @@ function graph(d3) {
 
   /// call redraw() if necessary (reconfig,recostom the actions, etc. )
   this.redraw = function () {
-    var fontSize = 8
+    var fontSize = 11
     var lineSpace = 2
     var boxHeight = 50
     var boxWidth = 125
@@ -361,6 +366,11 @@ function graph(d3) {
     .attr("class", "nodeText f1Text")
     .attr("y", -boxHeight / 2 + 2 * fontSize + 3 * lineSpace)
 
+    newNodes.append("text")
+    .attr("text-anchor", "middle")
+    .attr("class", "nodeText f1Description")
+    .attr("y", -boxHeight / 2 + 3 * fontSize + 4 * lineSpace)
+
     //详情矩阵
     //node body text
     newNodes.append("g")
@@ -396,6 +406,9 @@ function graph(d3) {
     }); //标题
     existingNodes.select(".f1Text").text(showSubheadAction ? showSubheadAction : function (d) {
       return Math.round(d.load * 100) + "%"
+    }); //副标题
+    existingNodes.select(".f1Description").text(showDescriptionAction ? showDescriptionAction : function (d) {
+      return ""
     }); //副标题
 
 
@@ -496,8 +509,8 @@ function init_page(){
       id: 0,
       name: "Trigger Response",
       load: Math.random(),
-      heading: "Processes input from bot user",
-      description: "",
+      heading: "Processes input",
+      description: "from bot user",
       ref: [{
         from: 0,
         to: 1,
@@ -581,22 +594,22 @@ function init_page(){
       id: 5,
       name: "Question Answer Pair",
       load: Math.random(),
-      heading: "Retrieval (Machine Learning)",
-      description: "",
+      heading: "Retrieval",
+      description: "(Machine Learning)",
     },
     "6": {
       id: 6,
       name: "Ontology",
       load: Math.random(),
-      heading: "Retrieval (Parse Tree + SPARQL)",
-      description: ""
+      heading: "Retrieval",
+      description: "(Parse Tree + SPARQL)"
     },
     "7": {
       id: 7,
       name: "Posts (Help Forum)",
       load: Math.random(),
-      heading: "Generative Deep Learning",
-      description: ""
+      heading: "Generative Deep",
+      description: "Learning"
     },
     "8": {
       id: 8,
@@ -638,8 +651,8 @@ function init_page(){
       id: 10,
       name: "Fixed Response List",
       load: Math.random(),
-      heading: "Retrieval (Machine Learning)",
-      description: ""
+      heading: "Retrieval",
+      description: "(Machine Learning)"
     },
     "11": {
       id: 11,
@@ -652,15 +665,15 @@ function init_page(){
       id: 12,
       name: "Dialogue Corpus",
       load: Math.random(),
-      heading: "Generative Deep Learning",
-      description: ""
+      heading: "Generative Deep",
+      description: "Learning"
     },
     "13": {
       id: 13,
       name: "Online Documents",
       load: Math.random(),
-      heading: "Retrival (Sentence Extraction)",
-      description: ""
+      heading: "Retrival",
+      description: "(Sentence Extraction)"
     },
   };
 
@@ -671,6 +684,10 @@ function init_page(){
 
   myGraph.showSubhead(function (d) {
     return d.heading;
+  });
+
+  myGraph.showDescription(function (d) {
+    return d.description;
   });
 
   myGraph.showPathDesc(function (d) {

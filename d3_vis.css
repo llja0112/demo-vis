@@ -28,13 +28,13 @@
     stroke: purple;
 }
 .nodeTitle {
-    font: 8px sans-serif;
+    font: 11px sans-serif;
     font-weight: bold;
 }
 .nodeText {
-    font: 8px sans-serif;
+    font: 11px sans-serif;
 }
-.f1Text {
+.f1Text, .f1Description {
     fill: orange;
     font-weight: bold;
 }
