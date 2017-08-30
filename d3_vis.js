@@ -514,13 +514,13 @@ function init_page(){
       ref: [{
         from: 0,
         to: 1,
-        edge_width: Math.random(),
+        edge_width: 0.72,
         colour: "#FFDB58"
       }, {
         from: 0,
         to: 2,
-        edge_width: Math.random(),
-        colour: "grey"
+        edge_width: 0.28,
+        colour: "green"
       }, ]
     },
     "1": {
@@ -532,12 +532,12 @@ function init_page(){
       ref: [{
         from: 1,
         to: 3,
-        edge_width: Math.random(),
+        edge_width: 0.78,
         colour: "#FFDB58"
       }, {
         from: 1,
         to: 4,
-        edge_width: Math.random(),
+        edge_width: 0.22,
         colour: "grey"
       }, ]
     },
@@ -550,130 +550,118 @@ function init_page(){
       ref: [{
         from: 2,
         to: 8,
-        edge_width: Math.random(),
+        edge_width: 0.34,
         colour: "grey"
       }, {
         from: 2,
         to: 9,
-        edge_width: Math.random(),
-        colour: "grey"
+        edge_width: 0.66,
+        colour: "green"
       }]
     },
     "3": {
       id: 3,
-      name: "Expert Provided",
+      name: "Retrieval",
       load: Math.random(),
       heading: "",
       description: "",
       ref: [{
         from: 3,
         to: 5,
-        edge_width: Math.random(),
+        edge_width: 0.12,
         colour: "grey"
       },{
         from: 3,
         to: 6,
-        edge_width: Math.random(),
+        edge_width: 0.88,
         colour: "#FFDB58"
       }]
     },
     "4": {
       id: 4,
-      name: "Crowd Sourced",
+      name: "Generative",
       load: Math.random(),
       heading: "",
       description: "",
       ref: [{
         from: 4,
         to: 7,
-        edge_width: Math.random(),
+        edge_width: 1.0,
         colour: "grey"
       }, ]
     },
     "5": {
       id: 5,
-      name: "Question Answer Pair",
+      name: "ML Classifier",
       load: Math.random(),
-      heading: "Retrieval",
-      description: "(Machine Learning)",
+      heading: "Question Answer",
+      description: "pair",
     },
     "6": {
       id: 6,
-      name: "Ontology",
+      name: "Semantic Query",
       load: Math.random(),
-      heading: "Retrieval",
-      description: "(Parse Tree + SPARQL)"
+      heading: "In-house",
+      description: "Ontology"
     },
     "7": {
       id: 7,
-      name: "Posts (Help Forum)",
+      name: "Seq2seq Deep Learning",
       load: Math.random(),
-      heading: "Generative Deep",
-      description: "Learning"
+      heading: "Help Forums",
+      description: ""
     },
     "8": {
       id: 8,
-      name: "Structured",
+      name: "Retrieval",
       load: Math.random(),
       heading: "",
       description: "",
       ref: [{
         from: 8,
         to: 10,
-        edge_width: Math.random(),
+        edge_width: 0.5,
         colour: "grey"
       },{
         from: 8,
         to: 11,
-        edge_width: Math.random(),
+        edge_width: 0.5,
         colour: "grey"
       }]
     },
     "9": {
       id: 9,
-      name: "Unstructured",
+      name: "Generative",
       load: Math.random(),
       heading: "",
       description: "",
       ref: [{
         from: 9,
         to: 12,
-        edge_width: Math.random(),
-        colour: "grey"
-      },{
-        from: 9,
-        to: 13,
-        edge_width: Math.random(),
-        colour: "grey"
+        edge_width: 1.0,
+        colour: "green"
       }]
     },
     "10": {
       id: 10,
-      name: "Fixed Response List",
+      name: "ML Classifier",
       load: Math.random(),
-      heading: "Retrieval",
-      description: "(Machine Learning)"
+      heading: "Question Answer",
+      description: "Pair"
     },
     "11": {
       id: 11,
-      name: "Wikidata",
+      name: "Semantic Query",
       load: Math.random(),
-      heading: "SPARQL Query",
+      heading: "DBPedia",
       description: ""
     },
     "12": {
       id: 12,
-      name: "Dialogue Corpus",
+      name: "Seq2seq Deep Learning",
       load: Math.random(),
-      heading: "Generative Deep",
-      description: "Learning"
-    },
-    "13": {
-      id: 13,
-      name: "Online Documents",
-      load: Math.random(),
-      heading: "Retrival",
-      description: "(Sentence Extraction)"
+      heading: "Movie Dialogues",
+      description: ""
     },
   };
 
